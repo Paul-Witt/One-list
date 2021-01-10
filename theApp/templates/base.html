@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+{% import  "bootstrap/wtf.html" as wtf %}
+{% import  "bootstrap/fixes.html" as fixes %}
+{% import  "bootstrap/utils.html" as util %}
+
+
+<html>
+    <head>
+
+      {% if title %}
+	      <title>{{ title }} - Test</title>
+	  {% else %}
+	      <title>Welcome to Test page</title>
+      {% endif %}
+
+    </head>
+
+    <body>
+        <div>
+		    Microblog:
+		    <a href="/index">Home</a>
+		    <a href="/login">Login</a>
+		</div>
+
+        <hr>
+
+        {% block content %}{% endblock %}
+
+    </body>
+
+</html>

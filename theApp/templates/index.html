@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if user.username != 'fart' %}
+    <h1>Hello, {{ user }}!</h1>
+    {% else %}
+    <h1>Ewww...</h1>
+    {% endif %}
+
+    {% for i in stuff.keys() %}
+    <div><p>{{ i }}   =   <b>{{ stuff[i] }}</b></p></div>
+    {% endfor %}
+
+{% endblock %}
